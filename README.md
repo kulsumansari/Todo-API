@@ -24,7 +24,7 @@ A RESTful API example for simple todo application with NodeJS
     nodemon app.js
   ```
     
-#####API Endpoint : http://127.0.0.1:3001
+##### API Endpoint : http://127.0.0.1:3001
 
 ## API
 
