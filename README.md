@@ -18,9 +18,9 @@ navigate to the root folder and run the following commands.
 * `GET` : Get all tasks
 * `POST` : Create new task
 
->> Post request body should be in JSON format.
+    Post request body should be in JSON format.
 
->> An example of Post request body for creating task is given below:
+    An example of Post request body for creating task is given below:
 ```json
 {
     "content" : " Go to gym",
@@ -29,16 +29,18 @@ navigate to the root folder and run the following commands.
 } 
 ```
 
->> **Note :** "content" ,"createdAt","updatedAt" are only valid keys for creating task.
+>> **Note :** "content" , "createdAt" , "updatedAt"  are only valid keys for creating task.
 
->> Upon the creation of new task id will be dynamically assigned and isCompleted is set to false.
+   Upon the creation of new task id will be dynamically assigned and isCompleted is set to false.
 
 #### /tasks/:id
 * `GET` : Get a task by Id
 * `POST` : Update a task by Id
->> Post request body should be in JSON format.
 
->> An example of Post request body for creating task is given below:
+    Post request body should be in JSON format.
+
+    An example of Post request body for creating task is given below:
+    
 ```json
 {
     "content" : " Go to gym",
@@ -47,7 +49,7 @@ navigate to the root folder and run the following commands.
     "isCompleted" : true,
 }
 ```
->> **Note :** "content" ,"createdAt","updatedAt","isCompleted" are only valid keys for updating task
+>> **Note :** "content" , "createdAt" , "updatedAt" , "isCompleted"  are only valid keys for updating task.
 
 * `DELETE` : Delete a task by Id
 
