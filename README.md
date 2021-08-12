@@ -8,9 +8,9 @@ A RESTful API example for simple todo application with NodeJS
  
    - Clone the Repository
    
-    ```
+   ```
     git clone https://github.com/kulsumansari/Todo-API.git
-    ```
+  ```
   - navigate to the root folder and run the following commands to install node modules.
    
     ```
@@ -20,11 +20,11 @@ A RESTful API example for simple todo application with NodeJS
     
   2. Run the Project
   
-    ```
+  ```
     nodemon app.js
-    ```
+  ```
     
-#### API Endpoint : http://127.0.0.1:3001
+#####API Endpoint : http://127.0.0.1:3001
 
 ## API
 
@@ -32,9 +32,9 @@ A RESTful API example for simple todo application with NodeJS
 * `GET` : Get all tasks
 * `POST` : Create new task
 
-    Post request body should be in JSON format.
+    POST request body should be in JSON format.
 
-    An example of Post request body for creating task is given below:
+    An example of POST request body for creating task is given below:
 ```json
 {
     "content" : " Go to gym",
@@ -51,9 +51,9 @@ A RESTful API example for simple todo application with NodeJS
 * `GET` : Get a task by Id
 * `POST` : Update a task by Id
 
-    Post request body should be in JSON format.
+    POST request body should be in JSON format.
 
-    An example of Post request body for creating task is given below:
+    An example of POST request body for creating task is given below:
     
 ```json
 {
