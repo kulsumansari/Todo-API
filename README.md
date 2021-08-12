@@ -8,7 +8,7 @@ A RESTful API example for simple todo application with NodeJS
 Download the code repository 
 navigate to the root folder and run the following commands.
 >> npm install
->> nodemon start
+>> npm run dev
 
 # API Endpoint : http://127.0.0.1:3001
 ```
