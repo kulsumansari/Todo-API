@@ -4,14 +4,28 @@
 A RESTful API example for simple todo application with NodeJS
 
 #### Installation and Run
-```bash
-Download the code repository 
-navigate to the root folder and run the following commands.
->> npm install
->> npm run dev
+ 1. Installation
+ 
+   - Clone the Repository
+   
+    ```
+    git clone https://github.com/kulsumansari/Todo-API.git
+    ```
+  - navigate to the root folder and run the following commands to install node modules.
+   
+    ```
+    npm install
+    ```
+    
+    
+  2. Run the Project
+  
+    ```
+    nodemon app.js
+    ```
+    
+#### API Endpoint : http://127.0.0.1:3001
 
-# API Endpoint : http://127.0.0.1:3001
-```
 ## API
 
 #### /tasks
@@ -54,5 +68,21 @@ navigate to the root folder and run the following commands.
 * `DELETE` : Delete a task by Id
 
 
+## Project Folder Structure
+```bash
 
+├── app.js
+├── package.json
+├── package-lock.json
+├── README.md
+├── controllers
+│   └── taskController.js
+├── data
+│   └── tasks.json
+├── models
+│   └── taskModel.js
+├── routes
+    └── taskRouter.js
+
+```
 
