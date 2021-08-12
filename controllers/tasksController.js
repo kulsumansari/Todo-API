@@ -18,6 +18,7 @@ const getTasksByID =(req, res, next)=>{
     let foundTask =Tasks.find((task) => task.taskId === taskId);
     if(!foundTask) {
         return res.status(404).json({
+            error : "Task not found",
             message:"Invalid Id"
         })
     }
@@ -28,7 +29,7 @@ const getTasksByID =(req, res, next)=>{
 }
 const addTaskValidation = (req, res, next) => {
     const objKeys = ['content', 'createdAt','updatedAt']
-    if(req.params.id){
+    if(req.params.taskId){
         objKeys.push('isCompleted');
     }
     if(!req.body.content){
@@ -36,28 +37,16 @@ const addTaskValidation = (req, res, next) => {
             message: "Invalid Request: Body Not Present",
             error: "Invalid Request",
         })
-    }else if(Object.keys(req.body).length > objKeys.length){ // checks if  some extra key:value is being passed 
+    }
+    isKeyValid = objKeys.every((key)=>Object.keys(req.body).includes(key));
+    if (!isKeyValid){
         return res.status(400).json({ 
             message: "Invalid Request: Keys are not compatible",
             error: "Invalid Request",
-        });
-    }
-    else{
-        let iskeyvalid;
-        objKeys.forEach((key)=>{
-            if(!Object.keys(req.body).includes(key)){
-                iskeyvalid =false;
-            }
         })
-        if(!iskeyvalid){
-            return res.status(400).json({ 
-                message: "Invalid Request: Keys are not compatible",
-                error: "Invalid Request",
-            })
-        }
-       
-        next();
     }
+    next();
+    
 }
 
 const createTask =(req, res, next) =>{
@@ -74,7 +63,7 @@ const createTask =(req, res, next) =>{
         }
         return res.status(200).json({
             message : "task Added",
-            data : Tasks
+            data : task
         })
     })
 }
