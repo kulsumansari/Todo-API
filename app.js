@@ -10,6 +10,7 @@ app.use(express.urlencoded({extended:false}));
 let text= `<embed type="text/markdown" src="https://saima422.github.io/mardown-trial/" height="100%" width="100%"/>`;
 fs.writeFileSync("./public/index.html", text);
 
+app.use(express.static('public'))
 app.use('/tasks',taskRouter)
 
 app.use(cors());
