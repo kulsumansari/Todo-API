@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended:false}));
 app.use('/tasks',taskRouter)
 
 app.use(cors());
-const port = Process.env.PORT || 3001 ; 
+const port = process.env.PORT || 3001 ; 
 app.listen( port , ()=>{
     console.log(`server started at port ${port}`);
 })
