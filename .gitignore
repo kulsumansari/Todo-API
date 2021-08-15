@@ -1,1 +1,4 @@
 node_modules/
+confif.env
+test.js
+app-dotenv.js

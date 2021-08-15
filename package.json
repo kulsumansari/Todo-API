@@ -5,13 +5,14 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -e js",
+    "dev": "nodemon -e .js",
     "start": "nodemon app.js"
   },
   "author": "kulsum",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
     "uniqid": "^5.3.0"
