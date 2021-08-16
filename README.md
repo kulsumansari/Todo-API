@@ -22,7 +22,7 @@ create task, update task and delete task.It uses File system operations to manip
   2. Run the Project
   
   ```
-     nodemon app.js
+  nodemon app.js
   ```
     
 ##### API Endpoint : http://127.0.0.1:3001
@@ -181,7 +181,7 @@ create task, update task and delete task.It uses File system operations to manip
    request body should be in JSON format. An example of POST request body for creating task is given below:
 
 
-      ```json
+      ```
       {
          "content" : " Go to gym",
          "createdAt" : "11/08/2021",
