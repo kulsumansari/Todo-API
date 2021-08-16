@@ -267,6 +267,11 @@ create task, update task and delete task.It uses File system operations to manip
      }
       ```
 
+## Run in postman
+
+You can test this API on Postman :
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/88c60e2df7d8e2ab003d?action=collection%2Fimport)
 
 ## Project Folder Structure
 ```bash
