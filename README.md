@@ -14,9 +14,9 @@ create task, update task and delete task.It uses File system operations to manip
   ```
   - navigate to the root folder and run the following commands to install node modules.
    
-    ```
-    npm install
-    ```
+  ```
+  npm install
+  ```
     
     
   2. Run the Project
@@ -30,43 +30,44 @@ create task, update task and delete task.It uses File system operations to manip
 
 ## API
 
-#### Get all tasks
+### Get all tasks
    
-   url: tasks/
-   
-   Method : `GET` 
-   
-   URL params : none
-   
-   request body : none
-   
-   * Response :
-      
-      Status Code: 200
-      body :
+ url: tasks/
+
+ Method : `GET` 
+
+ URL params : none
+
+ request body : none
+
+ * Response :
+
+    Status Code: 200
+
+    body :
       
       ```
       {
-    "message": "successful",
-    "data": [
-        {
-            "taskId": "2qqgt5iqkscxs44b",
-            "content": "some new edited",
-            "createdAt": "15 / 8 / 2021",
-            "updatedAt": "15 / 8 / 2021",
-            "isCompleted": false
-        },
-        {
-            "taskId": "2qqgtkwyksd6a5wx",
-            "content": "task 1",
-            "createdAt": "15 / 8 / 2021",
-            "updatedAt": "none",
-            "isCompleted": false
-        },
-      ]
-    }
+       "message": "successful",
+       "data": [
+          {
+              "taskId": "2qqgt5iqkscxs44b",
+              "content": "some new edited",
+              "createdAt": "15 / 8 / 2021",
+              "updatedAt": "15 / 8 / 2021",
+              "isCompleted": false
+          },
+          {
+              "taskId": "2qqgtkwyksd6a5wx",
+              "content": "task 1",
+              "createdAt": "15 / 8 / 2021",
+              "updatedAt": "none",
+              "isCompleted": false
+          },
+        ]
+     }
      ```
- #### Get a task by Id
+ ### Get task by Id
  
    url : /tasks/:taskId
    
@@ -78,9 +79,9 @@ create task, update task and delete task.It uses File system operations to manip
    
    * Successful Response
      
-     status code : 200
-     
-     body :
+       status code : 200
+
+       body :
      
      ```
      {
@@ -96,9 +97,9 @@ create task, update task and delete task.It uses File system operations to manip
      ```
       * Error Response:
          
-      status code : 404
+          status code : 404
 
-      body :
+          body :
       
       ```
       {
@@ -108,7 +109,7 @@ create task, update task and delete task.It uses File system operations to manip
      
      ```
      
-#### Create new task
+### Create new task
 
    url : /tasks
    
@@ -120,12 +121,13 @@ create task, update task and delete task.It uses File system operations to manip
    
    request body should be in JSON format. An example of POST request body for creating task is given below:
    
-  ```json
+  ```
   {
       "content" : " Go to gym",
       "createdAt" : "11/08/2021",
       "updatedAt" : "12/08/2021"
   } 
+
 ```
 
 >> **Note :** "content" , "createdAt" , "updatedAt"  are only valid keys for creating task.
@@ -134,9 +136,9 @@ create task, update task and delete task.It uses File system operations to manip
    
    * Successful Response:
       
-     * status code : 200
+        status code : 200
      
-       body :
+        body :
    
       ```
      {
@@ -154,9 +156,9 @@ create task, update task and delete task.It uses File system operations to manip
      
    * Error Response:
          
-      status code : 400
+       status code : 400
 
-      body :
+       body :
       
       ```
       {
@@ -167,7 +169,7 @@ create task, update task and delete task.It uses File system operations to manip
      ```
      
  
- #### Update a task by Id
+ ### Update task by Id
  
    url : /tasks/:taskId
 
@@ -192,30 +194,30 @@ create task, update task and delete task.It uses File system operations to manip
 
  * Successful Response:
       
-     * status code : 200
-     
-       body :
+    * status code : 200
+
+      body :
    
       ```
-     {
-       "message": "task Added",
-       "data": {
-           "taskId": "2qqgt4obkse3qjv8",
-           "content": " Go to gym",
-           "createdAt": "11/08/2021",
-           "updatedAt": "none",
-           "isCompleted": false
+       {
+         "message": "task Added",
+         "data": {
+             "taskId": "2qqgt4obkse3qjv8",
+             "content": " Go to gym",
+             "createdAt": "11/08/2021",
+             "updatedAt": "none",
+             "isCompleted": false
+         }
        }
-     }
-     ```
+       ```
      
      
    * Error Response:(Invalid Keys)
          
-      status code : 400 
+       status code : 400 
 
-      body :
-      
+       body :
+
       ```
       {
          "message": "Invalid Request: Keys are not compatible",
@@ -226,9 +228,9 @@ create task, update task and delete task.It uses File system operations to manip
      
     * Error Response: (task not found)
 
-     status code : 404
+       status code : 404
 
-     body :
+       body :
 
      ```
      {
@@ -238,7 +240,7 @@ create task, update task and delete task.It uses File system operations to manip
 
     ```
 
-#### Delete a task by Id
+### Delete a task by Id
 
    url : /tasks/:taskId
 
@@ -249,21 +251,21 @@ create task, update task and delete task.It uses File system operations to manip
    
    * Successful Response
      
-     status code : 204 (No Content)
+        status code : 204 (No Content)
+        
    
    * Error Response: (task not found)
 
-     status code : 404
+       status code : 404
 
-     body :
+       body :
 
      ```
      {
         "error": "Task not found",
         "message": "Invalid Id"
      }
-
-    ```
+      ```
 
 
 ## Project Folder Structure
