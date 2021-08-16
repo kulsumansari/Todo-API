@@ -67,7 +67,7 @@ create task, update task and delete task.It uses File system operations to manip
         ]
      }
      ```
- ### Get task by Id
+### Get task by Id
  
    url : /tasks/:taskId
    
@@ -168,8 +168,7 @@ create task, update task and delete task.It uses File system operations to manip
      
      ```
      
- 
- ### Update task by Id
+### Update task by Id
  
    url : /tasks/:taskId
 
